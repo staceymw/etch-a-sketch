@@ -24,7 +24,8 @@ function changeSize(input) {
     if (input >= 2 && input <= 100) {
         compileBoard(input);
     } else {
-        console.log("Number too high or low");
+        const errorMessage = document.getElementById("error-message");
+        errorMessage.innerHTML = "Please choose a number between 2 and 100."
     }
 }
 

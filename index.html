@@ -22,12 +22,14 @@
             </div>
             <div>
               <input
-              type="text"
-              placeholder="Size of Board"
-              value="16"
-              onchange="changeSize(this.value)"
-            /> 
-                <button>Set Size</button>
+                id="size-input"
+                type="text"
+                placeholder="Size of Board"
+                value="16"
+                onchange="changeSize(this.value)"
+              >
+              <button>Set Size</button>
+              <div id="error-message"></div>
             </div>
         </div>
     </div>

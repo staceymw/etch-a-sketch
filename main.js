@@ -1,3 +1,6 @@
+let color = "black";
+let click = "true"
+
 function compileBoard(size) {
     const board = document.querySelector(".board");
     const squares = board.querySelectorAll("div");
@@ -10,9 +13,10 @@ function compileBoard(size) {
         const square = document.createElement("div");
         square.style.backgroundColor = "blue";
         board.insertAdjacentElement("beforeend", square);
-        //square.addEventListener("mouseover", ());
+        square.addEventListener("mouseover", (colorSquare));
     }
-};
+}
+
  compileBoard(16);
 
 function changeSize(input) {
@@ -21,6 +25,18 @@ function changeSize(input) {
     } else {
         console.log("Number too high or low");
     }
-};
+}
 
-//function changeColor()
+function colorSquare() {
+    if (click) {
+        if (color === "random") {
+            this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+        } else {
+            this.style.backgroundColor = color;
+        }
+    }
+}
+
+function changeColor(choice) {
+    color = choice;
+}

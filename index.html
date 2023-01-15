@@ -5,51 +5,39 @@
     <title>Pixel Sketch</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=VT323">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto Mono">
   </head>
 
   <body>
+    <div class="title">Pixel Sketch</div>
+    <div class="mode">Mode: Coloring</div>
     <div class="flex-container">
-        <div class="title">Pixel Sketch</div>
-        <div class="mode">Mode: Coloring</div>
         <div class="content">
             <div class="board"></div>
             <div class="buttons">
-                <button onclick="changeColor('black')">Black</button>
-                <button onclick="changeColor('white')">Eraser</button>
-                <button onclick="changeColor('grey')">Grey</button>
-                <button onclick="changeColor('random')">Random</button>
-                <button onclick="resetBoard()">Reset</button>
+                <button class="button-33" onclick="changeColor('black')">Black</button>
+                <button class="button-33" onclick="changeColor('white')">Eraser</button>
+                <button class="button-33" onclick="changeColor('grey')">Grey</button>
+                <button class="button-33" onclick="changeColor('random')">Random</button>
+                <button class="button-33" onclick="resetBoard()">Reset</button>
             </div>
-            <div>
-              <input
-                id="size-input"
-                type="text"
-                placeholder="Size of Board"
-                value="16"
-                onchange="changeSize(this.value)"
-              >
-              <button>Set Size</button>
-              <div id="error-message"></div>
+            <div class="outer-input-wrapper">
+              <div class="inner-input-wrapper">
+                <input
+                  id="size-input"
+                  type="text"
+                  placeholder="Size of Board"
+                  value="16"
+                  onchange="changeSize(this.value)"
+                >
+              </div>
+              <button id="set-size" class="button-33">Set Size</button>
             </div>
+            <div id="error-message"></div>
         </div>
     </div>
 
   </body>
   <script src="main.js"></script>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--if (color === "random") {
-  this.style.backgroundColor = 
-  `hsl(${Math.random() * 360}, 100%, 50%)`;-->
